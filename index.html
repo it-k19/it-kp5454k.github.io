@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Сайт группы К-19</title>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<link rel="stylesheet" href="main.css">
+ </head>
+<body>
+	<header>
+    <div id="logo" onclick="slowScroll('#top')">
+        <span><strong>За IT – будущее!</strong></span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Обязанности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Фотографии</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">Контакты</a>
+    </div>
+  </header>
+	
+	<div id="top">
+		<h1>Сайт группы К-19</h1>
+		<h3>За IT – будущее!</h3>
+	</div>
+	
+  
+  	<div id="main">
+		<div class="intro">
+			<h2>В обязанности техника по компьютерным сетям входит:</h2>
+		</div>
+		<div class="text">
+			<span><h5><strong>Проектирование цифровых устройств. </p></p>Техническое обслуживание и ремонт компьютерных систем и комплексов. </p></p>Создание программ.</p></p> Тестирование и отладка микропроцессорных систем. </p></p>Осуществление установки и конфигурирования персональных компьютеров.</p></p> А так же подключение периферийных устройств и выявление их неисправностей.</strong></h5></span>
+		</div>
+	</div>
+	
+	<div id="overview">
+    <h2>Фотографии</h2>
+    <h4>нашей группы</h4>
+
+    <div class="img">
+      <img src="1prem.jpg">
+      <span></span>
+    </div>
+    <div class="img">
+      <img src="2prem.jpg">
+      <span></span>
+    </div>
+
+  
+
+  
+  <div id="faq">
+    <div>
+      <span class="title"><strong>Классный руководитель</strong></span><br>
+      <span class="heading">+7 910 295-03-59</span>
+    </div>
+    <div>
+      <span class="title"><strong>Староста</strong></span><br>
+      <span class="heading">+7 910 232-21-75</span>
+    </div>
+	<div>
+      <span class="title"><strong>Заместитель старосты</strong></span><br>
+      <span class="heading">+7 930 729-12-42</span>
+    </div>
+  </div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
